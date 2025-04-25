@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Событие</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f7f8fc;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .event-cover {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 20px;
+      overflow: hidden;
+      animation: slideUp 1.2s ease forwards;
+    }
+
+    .event-cover img {
+      width: 100%;
+      display: block;
+    }
+
+    .event-info {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .event-info p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      animation: slideUp 1.7s ease forwards;
+    }
+
+    .gallery img {
+      height: 150px;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .back-button {
+      display: block;
+      text-align: center;
+      margin: 40px auto;
+      padding: 12px 24px;
+      background: #6366f1;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .back-button:hover {
+      background: #4f46e5;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.7rem;
+      }
+
+      .gallery img {
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Вечер выпускников 2023</h1>
+    <p>15 августа 2023 · Центральный парк</p>
+  </header>
+
+  <div class="event-cover">
+    <img src="https://images.unsplash.com/photo-1602192955760-d0976dc4bebe?auto=format&fit=crop&w=1000&q=80" alt="Обложка события">
+  </div>
+
+  <div class="event-info">
+    <h2>О мероприятии</h2>
+    <p>Это был тёплый вечер, наполненный музыкой, танцами и воспоминаниями. Мы собрались вместе, чтобы отпраздновать окончание одного из самых важных этапов жизни — школы.</p>
+    <p>Организаторы сделали всё возможное, чтобы этот день запомнился надолго: фотозоны, конкурсы, живой концерт и многое другое.</p>
+  </div>
+
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1558980394-0c047acb7a55?auto=format&fit=crop&w=400&q=60" alt="Фото 1">
+    <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?auto=format&fit=crop&w=400&q=60" alt="Фото 2">
+    <img src="https://images.unsplash.com/photo-1585842471444-7d0f0e3076a1?auto=format&fit=crop&w=400&q=60" alt="Фото 3">
+    <img src="https://images.unsplash.com/photo-1580136594651-7f63b2f9a3f1?auto=format&fit=crop&w=400&q=60" alt="Фото 4">
+  </div>
+
+  <a href="gallery.html" class="back-button">←Galerie foto</a>
+
+</body>
+</html>
